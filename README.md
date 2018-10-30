@@ -12,9 +12,10 @@ random, json, time, datetime, faker kafka
 
 
 
+### Running the Script:
 
-To run the script in the backgroud:
+#### To run the script in the backgroud:
 nohup python data-generator-kafka-producer.py &
 
-To run the script and print to terminal:
+#### To run the script and print to terminal:
 python data-generator-kafka-producer.py
