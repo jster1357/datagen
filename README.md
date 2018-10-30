@@ -17,7 +17,7 @@ The data generater uses the faker python library to generate random values for e
 
 The generated defaulted in the script is the POSDataGenerator.This can be modifed by changed the selected class used for generating the data. 
 
-To modifiy what data generator is used, modifiy the d variable in the below code snippet in the python code. 
+To modifiy what data generator is used, modifiy the **d variable**  to point to one of the above data generators. 
 ```python
 if __name__ == '__main__':
     d = POSDataGenerator()
@@ -27,23 +27,7 @@ if __name__ == '__main__':
         producer.send(KAFKA_TOPIC, record)
         print(record)
 ```
-
-
-
-
 A kafka producer has been included as well as a sleep timer that will regulate the data generation. It is defaulted to 1 json record per second but this can be adjusted as required. 
-
-```python
-if __name__ == '__main__':
-    d = POSDataGenerator()
-    for i in range(1,20000):
-        record = d.gen_row()
-        record = json.dumps(record)
-        producer.send(KAFKA_TOPIC, record)
-        print(record)
-```
-
-
 
 ### Python Library Requirements (use pip to install dependencies):
 random, json, time, datetime, faker kafka
