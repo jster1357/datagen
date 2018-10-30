@@ -47,6 +47,7 @@ class CustomerDataGenerator(DataGenerator):
         row['cust_is_active'] = 1 if random.random() > .2 else 0
         row['cust_address'] = self.fake.address().replace('\n',', ')
         row['cust_company_name'] = self.fake.company()
+        time.sleep(1)
         return row
 
 class SalesRepDataGenerator(DataGenerator):
@@ -70,7 +71,7 @@ class SalesRepDataGenerator(DataGenerator):
         row['quota'] = random.randrange(5,11)*100000
         row['start_date'] = str(self.fake
             .date_this_decade(before_today=True, after_today=False))
-
+        time.sleep(1)
         return row
 
 class POSDataGenerator(DataGenerator):
@@ -96,6 +97,7 @@ class POSCustomerDataGenerator(POSDataGenerator):
         row = self.cust_gen.gen_row()
         row.update(super(POSCustomerDataGenerator, self).gen_row())
         row.pop('cust_id')
+        time.sleep(1)
         return row
 
 
@@ -135,6 +137,7 @@ class ManufacturingDataGenerator(DataGenerator):
         row['heat_tolr_pct'] = random.gauss(name_obj['heat_dist_center'], name_obj['heat_thrs']*1.5)
         row['heat_tolr_thrs'] = name_obj['heat_dist_center']-name_obj['heat_thrs']
         row['qty'] = random.randrange(1,5)
+        time.sleep(1)
         return row
 
 z = 0
