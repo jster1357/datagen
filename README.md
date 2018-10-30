@@ -15,9 +15,9 @@ The data generater uses the faker python library to generate random values for e
 - *POSCustomerDataGenerator*
 - *ManufacturingDataGenerator*
 
-The generated defaulted in the script is the POSDataGenerator.This can be modifed by changed the selected class used for generating the data. 
+The default data genenerator in the script is the POSDataGenerator.This can be modifed by changed the selected class used for generating the data. 
 
-To modifiy what data generator is used, modifiy the **d variable**  to point to one of the 5 unique data generators listed above. 
+To modifiy what data generator is used, modifiy the **d variable**  to point to one of the 5 unique data generators listed above. To modify the number of records to produce, modify the rage defined in the for loop. In the example below, the data generator will product 20,000 records before terminating. 
 ```python
 if __name__ == '__main__':
     d = POSDataGenerator()
