@@ -7,7 +7,15 @@ https://github.com/anarasimham/data-gen
 
 ### Overview
 
-The data generater uses the faker python library to generate random values for each attribute in a given schema. The ouput of the script is json format.
+The data generater uses the faker python library to generate random values for each attribute in a given schema. The ouput of the script is json format. In the script there are 5 unique data generators:
+
+- CustomerDataGenerator
+- SalesRepDataGenerator
+- POSDataGenerator
+- POSCustomerDataGenerator
+- ManufacturingDataGenerator
+
+The generated defaulted in the script is the POSDataGenerator.
 
 In this version of the script, a kafka producer has been included as well as a sleep timer that will regulate the data generation. It is defaulted to 1 json record per second but this can be adjusted as required. 
 
