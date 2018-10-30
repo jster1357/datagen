@@ -1,4 +1,4 @@
-# datagen
+# Data Generator 
 
 Thanks to @anarasimham for the python skeleton that was modifed for this data generator. 
 
@@ -27,7 +27,7 @@ if __name__ == '__main__':
         producer.send(KAFKA_TOPIC, record)
         print(record)
 ```
-A kafka producer has been included as well as a sleep timer that will regulate the data generation. It is defaulted to 1 json record per second but this can be adjusted as required. 
+A kafka producer has been included as well as a sleep timer that will regulate the data generation. The timer is defaulted to 1 json record per second but this can be adjusted as required. 
 
 ### Python Library Requirements (use pip to install dependencies):
 random, json, time, datetime, faker kafka
