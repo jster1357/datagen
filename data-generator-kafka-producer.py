@@ -6,8 +6,8 @@ from datetime import datetime
 from faker import Faker
 
 
-KAFKA_TOPIC = 'demo'
-KAFKA_BROKERS='jtaras-druid2.field.hortonworks.com:6667'
+KAFKA_TOPIC = 'put your kafka topic name here'
+KAFKA_BROKERS='put your brokerhost:port here'
 
 producer = KafkaProducer(bootstrap_servers=KAFKA_BROKERS)
 
@@ -86,7 +86,7 @@ class POSDataGenerator(DataGenerator):
         row['rep_id'] = random.randrange(rep_count)
         row['part_sku'] = chr(random.randint(65,91))+'-'+str(random.randint(800,1001))
         row['qty'] = random.randrange(11)
-        time.sleep(2)
+        time.sleep(1)
         return row
 
 class POSCustomerDataGenerator(POSDataGenerator):
