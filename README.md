@@ -9,15 +9,15 @@ https://github.com/anarasimham/data-gen
 
 The data generater uses the faker python library to generate random values for each attribute in a given schema. The ouput of the script is json format. In the script there are 5 unique data generators:
 
-- CustomerDataGenerator
-- SalesRepDataGenerator
-- POSDataGenerator
-- POSCustomerDataGenerator
-- ManufacturingDataGenerator
+- *CustomerDataGenerator*
+- *SalesRepDataGenerator*
+- *POSDataGenerator*
+- *POSCustomerDataGenerator*
+- *ManufacturingDataGenerator*
 
 The generated defaulted in the script is the POSDataGenerator.This can be modifed by changed the selected class used for generating the data. 
 
-To modifiy what data generator is used, modifiy the **d variable**  to point to one of the above data generators. 
+To modifiy what data generator is used, modifiy the **d variable**  to point to one of the 5 unique data generators listed above. 
 ```python
 if __name__ == '__main__':
     d = POSDataGenerator()
